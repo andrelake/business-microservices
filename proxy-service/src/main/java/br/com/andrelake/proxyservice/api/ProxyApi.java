@@ -13,8 +13,12 @@ import java.util.List;
 
 @Configuration
 public class ProxyApi {
-    @Autowired
+    final
     ZuulProperties properties;
+
+    public ProxyApi(ZuulProperties properties) {
+        this.properties = properties;
+    }
 
     @Primary
     @Bean
